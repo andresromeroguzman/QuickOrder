@@ -189,7 +189,7 @@
 	<script>
 		function OrderOnclick(OrderID)
 		{
-			if(confirm("Are you sure you want to cancel this order?") == true)
+			if(confirm("¿Seguro quieres cancelar la orden?") == true)
 			{
 				window.open("CuentaAccion.php?oID="+OrderID,"_self",null,true);
 			}

@@ -52,7 +52,7 @@
 			$res = mysqli_query($Conn,$sql);
 			if($res)
 			{
-				echo '<script>window.alert("Product has been successfully updated!"); window.open("ProductosLista.php","_self",null,true)</script>';
+				echo '<script>window.alert("El producto ha sido actualizado!"); window.open("ProductosLista.php","_self",null,true)</script>';
 			}
 		}
 		$sql = "UPDATE `productos` SET `nombre`='$_nombre',`marca`='$_marca',`tamano`='$_tamano'," .
@@ -61,7 +61,7 @@
 		$res = mysqli_query($Conn,$sql);
 		if($res)
 		{
-			echo '<script>window.alert("Product has been successfully updated!"); window.open("ProductosLista.php","_self",null,true)</script>';
+			echo '<script>window.alert("El producto ha sido actualizado!"); window.open("ProductosLista.php","_self",null,true)</script>';
 		}
 	}else if($ProductAction == "Delete")
 	{
@@ -70,7 +70,7 @@
 		$res = mysqli_query($Conn,$sql);
 		if($res)
 		{
-			echo '<script>window.alert("Product has been successfully Deleted!"); window.open("ProductosLista.php","_self",null,true)</script>';
+			echo '<script>window.alert("El Producto ha sido Borrado!"); window.open("ProductosLista.php","_self",null,true)</script>';
 		}
 	}
 
