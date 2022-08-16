@@ -68,9 +68,7 @@
 		}
 	?>
 
-    <div class="container">
-
-        <div class="row">
+    <div class="container">        
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
@@ -103,11 +101,10 @@
 					</div>
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</form>
-				</div>
-                
-                <div class="clearfix"></div>
-            </div>
-        </div>
+				</div>                
+                <div class="clearfix"></div> 
+             </div>
+        
 
     </div>
     <!-- /.container -->
