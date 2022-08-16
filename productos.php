@@ -46,7 +46,7 @@
                 	<li><a href="#">Quick⏱rder</a></li>
                 	<li><a href="index.php">Inicio</a></li>
 					<!-- <li><a href="bestseller.php">Productos más Populares</a></li> -->
-					<li><a href="shop.php">Productos</a></li>
+					<li><a href="productos.php">Productos</a></li>
                     <li><a href="about.php">Quienes somos</a></li>
 					<li><a href="#" onclick="ManagementOnclick();">Administrador</a></li>
 					<?php if($Username == null){echo '<li><a href="register.php?ActionType=Register">Registrarse</a></li>';} ?>

@@ -123,7 +123,7 @@
 			{
 				if(confirm("¿Seguro deseas editar este producto?")==true)
 				{
-					window.open("Management_Products.php?ProdID="+pid+"&ProductAction="+action,"_self",null,true);
+					window.open("ProductosManejo.php?ProdID="+pid+"&ProductAction="+action,"_self",null,true);
 				}
 			}else if(action == "Delete")
 			{

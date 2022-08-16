@@ -80,8 +80,8 @@
 
     <footer class="mt-4">
         <div class="container-fluid">
-            <div class="row">
-                <div class="footer text-center">
+            <div class="">
+                <div class="footer titles">
                     <p> DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022 <br> SENA</p> 
 
                 </div>

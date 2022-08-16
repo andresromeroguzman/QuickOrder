@@ -1,27 +1,24 @@
 <?php
 	
 	require 'Connection.php';
-	
 	$ActionType = $_GET['ActionType'];
-	$Location = $_GET["Loc"];
-	$Username = $_POST['Username'];
+	$Username = $_POST['Username'];		
 	$Password = $_POST['Password'];
 	$nombres = $_POST['nombres'];
 	$apellidos = $_POST['apellidos'];
-	$Lastname = $_POST['Lastname'];
 	$direccion = $_POST['direccion'];
 	$correo = $_POST['correo'];
 	
-	if(empty($Username) || empty($Password) || empty($nombres) || empty($apellidos) || empty($Lastname) || empty($direccion) || empty($correo))
+	if(empty($Username) || empty($Password) || empty($nombres) || empty($apellidos)  || empty($direccion) || empty($correo))
 	{
-		echo '<script>window.alert("Cannot leave the page blank"); window.open("register.php","_self",null,true);</script>';
+		echo '<script>window.alert("Debe llenar todos los campos"); window.open("register.php","_self",null,true);</script>';
 	}
 	else
 	{
 		if($ActionType == "Register")
 		{
-			$sql = "INSERT INTO `usuarios`(`Username`,`Password`,`Role`,`nombres`, `apellidos`, `Lastname`, `direccion`, `correo`)" .
-					" VALUES ('$Username','$Password','User','$nombres','$apellidos','$Lastname','$direccion','$correo')";
+			$sql = "INSERT INTO `usuarios`(`Username`,`Password`,`Role`,`nombres`, `apellidos`,`direccion`, `correo`)" .
+					" VALUES ('$Username','$Password','User','$nombres','$apellidos','$direccion','$correo')";
 			$res = mysqli_query($Conn,$sql);
 			if(!$res)
 			{
@@ -35,7 +32,7 @@
 		{
 			$ID = $_GET['ID'];
 			$sqlI = "UPDATE `usuarios` SET `Username`='$Username',`Password`='$Password',`nombres`='$nombres'," .
-			"`apellidos`='$apellidos',`Lastname`='$Lastname',`direccion`='$direccion',`correo`='$correo' WHERE CustomerID = $ID";
+			"`apellidos`='$apellidos',`direccion`='$direccion',`correo`='$correo' WHERE CustomerID = $ID";
 			$res = mysqli_query($Conn,$sqlI);
 			if(!$res)
 			{

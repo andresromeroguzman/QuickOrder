@@ -65,15 +65,14 @@
 
         <div class="row">
             
-                <div class="col-md-6 ">
+        <div class="col-md-6 ">
 						<hr>
 						<h2 class="intro-text text-center"><?php if($ActionType == "Register"){echo "Registro";}else echo "Edita la Información de tu Cuenta"; ?></h2>
 						<hr>
                     </div>
 					<div class="col-md-6">	
 							<form role="form" action="RegisterAction.php?ActionType=<?php echo $ActionType; if($ActionType == "Edit"){ echo "&Loc=" . $Loc . "&ID=" .$ID;} ?>" 
-							method="POST">
-							
+							method="POST">						
 							<div class="form-group">
 							  <label for="username">Usuario:</label>
 							  <input type="text" name="Username" class="form-control" id="Username" placeholder="Ingresa tu usuario">
@@ -85,19 +84,13 @@
 							</div>
 
 							<div class="form-group">
-							  <label for="nombres">Primer Nombre:</label>
-							  <input type="text" name="nombres" class="form-control" id="nombres" placeholder="Ingresa tu primer nombre">
-							</div>
-							
-							<div class="form-group">
-							  <label for="apellidos">Primer Apellido:</label>
-							  <input type="text" name="apellidos" class="form-control" id="apellidos" placeholder="Ingresa tu primer apellido">
-							</div>
-							
-							<div class="form-group">
-							  <label for="Lastname">Segundo Apellido:</label>
-							  <input type="text" name="Lastname" class="form-control" id="Lastname" placeholder="Ingresa tu segundo apellido">
-							</div>
+							  <label for="nombres">Nombres:</label>
+							  <input type="text" name="nombres" class="form-control" id="nombres" placeholder="Ingresa tus nombres">
+							</div>		
+                            <div class="form-group">
+							  <label for="nombres">Apellidos:</label>
+							  <input type="text" name="apellidos" class="form-control" id="apellidos" placeholder="Ingresa tus apellidos">
+							</div>					
 							
 							<div class="form-group">
 							  <label for="direccion">Dirección:</label>
@@ -105,8 +98,8 @@
 							</div>
 							
 							<div class="form-group">
-							  <label for="correo">Dirección de Correo:</label>
-							  <input type="correo" name="correo" class="form-control" id="correo" placeholder="Ingresa tu dirección de correo">
+							  <label for="correo">Correo electrónico:</label>
+							  <input type="correo" name="correo" class="form-control" id="correo" placeholder="Ingresa tu correo">
 							</div>
 							
 							<button type="submit" class="btn btn-default">Enviar</button><br><br>

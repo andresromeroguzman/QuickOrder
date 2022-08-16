@@ -47,7 +47,7 @@
 					<li><a href="OrdenesManejo.php">Ordenes</a></li>
 					<li><a href="ProductosManejo.php?ProductAction=Add">Crear Producto</a></li>
 					<li><a href="ProductosLista.php">Lista de Productos</a></li>
-                    <li><a href="Management_Customers.php">Clientes</a></li>
+                    <li><a href="ClientesManejo.php">Clientes</a></li>
 					
                 </ul>
             </div>
@@ -56,7 +56,7 @@
 
     <div class="container">
 
-        <div class="row">
+        
             <div class="box">
                 <div class="col-lg-12">
 						<hr>
@@ -110,7 +110,7 @@
 							</div>
 						</div>
 						</form>
-					</div>
+				
                 </div>
             </div>
         </div>

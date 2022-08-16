@@ -37,9 +37,9 @@
 	?>
 </head>
 
-<body>
+<body">
 
-    
+    <div class="container-fluid">
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid bg-dark text-dark ">
             <div class="navbar-header">
@@ -64,16 +64,23 @@
             </div>
         </div>
     </nav>
-       <div class="container-fluid">
-
+       <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h4>Realiza tu pedido y reclama tu orden en tiempo exacto</h4>
+                <p>Un nuevo servicio de gestión de pedidos en sitio, facilidad de uso, rapida, confiable y precisa</p>
+            </div>
+            <div class="col-6">
+            <h4>Realiza tu pedido y reclama tu orden en tiempo exacto</h4>
+            <img src="img/Quienes.png" alt="Quienes somos" class="QuienesImg">
+            </div>
+        </div>
         
-
+        </div>
     </div>
     <!-- /.container -->
 
-    <footer>
-        <div class="container-fluid">
-            <div class="row">
+    <footer class="container-fluid">                 
                 <div class="footer col-lg-12 text-center">
                     <p>
                     <?php echo '<strong>'.$Username.'</strong>'; ?>
@@ -84,13 +91,12 @@
                     <a href="#">Volver al inicio</a>
                     </strong><br>
                     DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022
-                    </p>
-                    
-                </div>
+                    </p>           
             </div>
         </div>
+        
     </footer>
-
+    
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 

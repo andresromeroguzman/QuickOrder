@@ -64,7 +64,7 @@
 <!-- Inicio seccion de productos -->
     <section>
     	<div class="container-fluid my-5">
-    		<h1 class="text-center fw-bold display-2 mb-3">Productos en
+    		<h1 class="titles fw-bold display-2 mb-3">Productos en
     			<span class="text-danger">Promocion solo por HOY</span>
     		</h1>
 		<!-- Inicio del Carousel owl -->
@@ -142,7 +142,7 @@
 
     <!-- Imprimir los productos -->
 		<div class="container-fluid">
-			<h2 class="text-center">selecciona tu producto y realiza la orden</h2>
+			<h2 class="titles">selecciona tu producto y realiza la orden</h2>
 		<!-- Establecer conexion para llamar los productos -->
 		<?php 
 			$conn = mysqli_connect("localhost","root","","quickorder");
@@ -172,9 +172,8 @@
 	</div>
 <!-- Pie de pagina -->
     <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="footer text-center">
+        <div class="container-fluid">            
+                <div class="footer titles">
                     <p>
 					<?php echo '<strong>Bienvenido '.$Username.'</strong>'; ?>
 					<br>
@@ -184,9 +183,7 @@
 					<a href="#">Volver al inicio</a>
 					</strong><br>
 					DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022
-					</p>
-					
-                </div>
+					</p>             
             </div>
         </div>
     </footer>
