@@ -1,14 +1,12 @@
 <? session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Login</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/business-casual.css" rel="stylesheet">
@@ -23,10 +21,8 @@
 		}
 	?>
 </head>
-
 <body>
-<div class="container-fluid">  
-
+<div class="container-fluid">
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -47,7 +43,6 @@
             </div>
         </div>
     </nav>
-
     <div class="container">
         <div class="row">		
                 <div class="col-lg-6">
@@ -66,33 +61,23 @@
 					<div class="form-group">
 					  <label for="Password">Contraseña:</label>
 					  <input type="password" name="Password" class="form-control" id="Password" placeholder="Ingrese su contraseña" required>
-					</div>
-					
-					<button type="submit" class="btn btn-primary">Enviar</button>
-					
+					</div>					
+					<button type="submit" class="btn btn-primary">Enviar</button>					
 				  </form>
-                </div>     
-            
+                </div>                 
         </div>
-
     </div>
-
-
     <footer class="mt-4">
         <div class="container-fluid">
             <div class="">
                 <div class="footer titles">
-                    <p> DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022 <br> SENA</p> 
-
+                    <p> DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022 <br> SENA</p>
                 </div>
             </div>
         </div>
     </footer>
     </div>
-
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
 </body>
-
 </html>
