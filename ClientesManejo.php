@@ -7,12 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+<<<<<<< HEAD
     <title>Clientes</title>
+=======
+    <title>Clientes Manejo</title>
+>>>>>>> 44294b6f853be18b0e461b97ec82757f9ab8c682
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/business-casual.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+<<<<<<< HEAD
 	<?php
+=======
+ 	<?php
+>>>>>>> 44294b6f853be18b0e461b97ec82757f9ab8c682
 		$Username = null;
 		if(!empty($_SESSION["Username"]))
 		{$Username = $_SESSION["Username"];}
@@ -41,7 +49,13 @@
             </div>
         </div>
     </nav>
+<<<<<<< HEAD
     <div class="container">      
+=======
+
+    <div class="container">
+        <div class="row">
+>>>>>>> 44294b6f853be18b0e461b97ec82757f9ab8c682
             <div class="box">
                 <div class="col-lg-12">
 					<div class="table-responsive">
@@ -81,6 +95,10 @@
 					</div>
                 </div>
             </div>
+<<<<<<< HEAD
+=======
+        </div>
+>>>>>>> 44294b6f853be18b0e461b97ec82757f9ab8c682
     </div>
     <footer>
         <div class="container">
@@ -91,9 +109,7 @@
             </div>
         </div>
     </footer>
-	
-
-    <script src="js/jquery.js"></script>
+	<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script>
 		function actionOnclick(Action,CustomerID){

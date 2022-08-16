@@ -52,7 +52,11 @@
 			$res = mysqli_query($Conn,$sql);
 			if($res)
 			{
+<<<<<<< HEAD
 				echo '<script>window.alert("Producto ha sido actualizado correctamente!"); window.open("ProductosLista.php","_self",null,true)</script>';
+=======
+				echo '<script>window.alert("El producto ha sido actualizado!"); window.open("ProductosLista.php","_self",null,true)</script>';
+>>>>>>> 44294b6f853be18b0e461b97ec82757f9ab8c682
 			}
 		}
 		$sql = "UPDATE `productos` SET `nombre`='$_nombre',`marca`='$_marca',`tamano`='$_tamano'," .
@@ -61,7 +65,11 @@
 		$res = mysqli_query($Conn,$sql);
 		if($res)
 		{
+<<<<<<< HEAD
 			echo '<script>window.alert("Producto ha sido actualizaco correctamente!"); window.open("ProductosLista.php","_self",null,true)</script>';
+=======
+			echo '<script>window.alert("El producto ha sido actualizado!"); window.open("ProductosLista.php","_self",null,true)</script>';
+>>>>>>> 44294b6f853be18b0e461b97ec82757f9ab8c682
 		}
 	}else if($ProductAction == "Delete")
 	{
@@ -70,7 +78,11 @@
 		$res = mysqli_query($Conn,$sql);
 		if($res)
 		{
+<<<<<<< HEAD
 			echo '<script>window.alert("El Producto ha sido eliminado correctamente!"); window.open("ProductosLista.php","_self",null,true)</script>';
+=======
+			echo '<script>window.alert("El Producto ha sido Borrado!"); window.open("ProductosLista.php","_self",null,true)</script>';
+>>>>>>> 44294b6f853be18b0e461b97ec82757f9ab8c682
 		}
 	}
 
