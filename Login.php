@@ -25,7 +25,7 @@
 <div class="container-fluid">
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
-
+        <!-- Inicio de la barra de navegacion -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only"></span>
@@ -54,6 +54,7 @@
                     <h2 class="intro-text text-center">Inicia Sesion Para Realizar Tu Pedido</h2>
                     <hr>
                 </div>
+                <!-- Formulario para inicio de sesion Rol User -->
                 <div class="col-md-6 justify-content-center">
                  <form role="form" action="loginDestino.php?Role=<?php echo $Role; ?>" method="POST">
 				 

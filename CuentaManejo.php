@@ -12,7 +12,8 @@
     <link href="css/business-casual.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-	<?php
+<!-- Definir la accion para traer datos de la tabla del perfil de usuario -->
+<?php
 		require 'Connection.php';
 		$Username = null;
 		if(!empty($_SESSION["Username"]))
@@ -56,6 +57,7 @@
             </div>
         </div>
     </nav>
+	<!-- Mostrar datos del usuario usando las variables previamente definidas -->
     <div class="container">
         <div class="row">
             <div class="box">
@@ -164,6 +166,8 @@
     </footer>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
 	<script>
 		function OrderOnclick(OrderID)
 		{

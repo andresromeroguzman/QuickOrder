@@ -1,3 +1,4 @@
+<!-- Cierre de sesion -->
 <?php
 	session_start();
 	$_SESSION["Username"] = null;

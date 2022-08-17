@@ -15,7 +15,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-	<?php
+	<!-- Declaracion para funciones de logeo en el footer -->
+    <?php
 		$Username = null;
 		if(!empty($_SESSION["Username"]))
 		{
@@ -25,6 +26,7 @@
 </head>
 <body">
     <div class="container-fluid">
+ <!-- Inicio del Navbar -->
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid bg-dark text-dark ">
             <div class="navbar-header">
@@ -49,6 +51,7 @@
             </div>
         </div>
     </nav>
+    <!-- Inicio de la seccion informacion -->
        <div class="container">
         <div class="row">
             <div class="col-sm-6 col-md-6">
@@ -72,15 +75,19 @@
         </div>        
         </div>
     </div>    
+    <!-- Inicio del footer -->
     <footer>
         <div class="container-fluid">            
                 <div class="footer titles">
                     <p>
+                        <!-- Se trae el nombre de usuario mediante la variable -->
 					<?php echo '<strong>Bienvenido '.$Username.'</strong>'; ?>
-					<br>					
+					<br>
+                    <!-- Validacion -->
 					<?php if($Username != null){echo '<a href="CuentaManejo.php?Role=User">Administrar Cuenta</a> |';} ?> 
 					<?php if($Username == null){echo '<a href="Login.php?Role=User"></a>';} else {echo '<a href="Logout.php">CERRAR SESION | </a>';} ?>  
-					<a href="#" onclick="ManagementOnclick();">Ingresar Como Administrador</a> |
+					<!-- Llamar evento alojado en el archivo main en la carpeta Js -->
+                    <a href="#" onclick="ManagementOnclick();">Ingresar Como Administrador</a> |
 					<a href="#">Volver al inicio</a> 
 					<br>
 					 DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE <br> SENA 2022

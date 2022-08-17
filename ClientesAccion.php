@@ -1,3 +1,4 @@
+<!-- Eliminar usuario generando conexion a la base de datos interviniendo la tabla usuarios -->
 <?php
 	require 'Connection.php';
 	$CustomerID = $_GET["ID"];

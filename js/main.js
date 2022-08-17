@@ -20,6 +20,29 @@ function abrirTicket(button){
     window.open("ticket.php","_self",null,true);
 }
 
-	
+function actionOnclick(Action,CustomerID){
+    if(Action == "Edit")
+    {
+        if(confirm("¿Seguro deseas editar esta información?") == true)
+        {
+            window.open("Register.php?ActionType=Edit&Loc=MC&ID="+CustomerID,"_self",null,true);
+        }
+    }
+    else if(Action == "Delete")
+    {
+        if(confirm("¿Seguro deseas eliminar esta información?") == true)
+        {
+            window.open("ClientesAccion.php?ID="+CustomerID,"_self",null,true);
+        }
+    }
+}	
+
+function OrderOnclick(OrderID)
+{
+    if(confirm("¿Seguro quieres cancelar la orden?") == true)
+    {
+        window.open("CuentaAccion.php?oID="+OrderID,"_self",null,true);
+    }
+}
  
 	

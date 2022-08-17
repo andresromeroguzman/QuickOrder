@@ -12,7 +12,8 @@
     <link href="css/business-casual.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
- 	<?php
+ 	<!-- Sesion iniciada con el perfil Admin -->
+	<?php
 		$Username = null;
 		if(!empty($_SESSION["Username"]))
 		{$Username = $_SESSION["Username"];}
@@ -40,6 +41,7 @@
             </div>
         </div>
     </nav>
+	<!-- Estructura de la tabla con los datos de los usuarios registrados -->
     <div class="container">
             <div class="box">
                 <div class="col-lg-12">
@@ -56,12 +58,14 @@
 								<td>Correo</td>								
 								<td>Acción</td>
 							</tr>
+							<!-- Se ejecuta consulta a la base de datos para traer la info del cliente registrado -->
 								<?php 
 								require 'Connection.php';
 								$sql = "select CustomerID,Username,Password,nombres,apellidos,direccion,correo from usuarios where Role = 'User'";
 								$Resulta = mysqli_query($Conn,$sql);
 								while($Rows = mysqli_fetch_array($Resulta)):; 
 								?>
+								<!-- Muestra la tabla con los datos previamente consultados -->
 							<tr style="color: black">
 								<td><?php $cid = $Rows[0]; echo $cid; ?></td>
 								<td><?php echo $Rows[1]; ?></td>
@@ -71,6 +75,7 @@
 								<td><?php echo $Rows[5]; ?></td>
 								<td><?php echo $Rows[6]; ?></td>								
 								<td>
+									<!-- Eventos Javascript con sus funciones respectivas para editar o eliminar registro -->
 								<a href="#" onclick="actionOnclick('Edit',<?php echo $cid; ?>)">Editar</a> | 
 								<a href="#" onclick="actionOnclick('Delete',<?php echo $cid; ?>)">Eliminar</a>
 								</td>
@@ -97,7 +102,9 @@
     </footer>
 	<script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
 	<script>
+	// Funciones Javascript
 		function actionOnclick(Action,CustomerID){
 			if(Action == "Edit")
 			{

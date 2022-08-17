@@ -1,3 +1,4 @@
+<!-- Eliminar orden realizada -->
 <?php
 	require 'Connection.php';
 	$orderID = $_GET["oID"];
