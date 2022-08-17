@@ -74,7 +74,7 @@
 				    	<div class="card border-0 shadow">
 				    		<img src="img/hamburguesas.jpg" class="img-card-top" alt="Hamburguesa">
 				    		<div class="card-body">
-				    			<h4>Hamburguesa</h4>
+				    			<h4 class="text-center">Hamburguesa</h4>
 				    		</div>
 				    	</div>
 				    </div>				   
@@ -82,7 +82,7 @@
 				    	<div class="card">
 				    		<img src="img/pollo.jpg" class="img-card-top" alt="Hamburguesa">
 				    		<div class="card-body">
-				    			<h4>Pollo Apanado</h4>
+							<h4 class="text-center">Pollo Apanado</h4>
 				    		</div>
 				    	</div>
 				    </div>
@@ -90,7 +90,7 @@
 				    	<div class="card">
 				    		<img src="img/pizza.jpg" class="img-card-top" alt="Hamburguesa">
 				    		<div class="card-body">
-				    			<h4>Pizza Italiana</h4>
+							<h4 class="text-center ">Pizza Italiana</h4>
 				    		</div>
 				    	</div>
 				    </div>
@@ -98,7 +98,7 @@
 				    	<div class="card">
 				    		<img src="img/lasagna.jpg" class="img-card-top" alt="Hamburguesa">
 				    		<div class="card-body">
-				    			<h4>Lasagna</h4>
+							<h4 class="text-center font-weight-bold">Lasagna</h4>
 				    		</div>
 				    	</div>
 				    </div>
@@ -106,7 +106,7 @@
 				    	<div class="card">
 				    		<img src="img/salchipapa.jpg" class="img-card-top" alt="Hamburguesa">
 				    		<div class="card-body">
-				    			<h4>Salchipapa</h4>
+							<h4 class="text-center font-weight-bold">Salchipapa</h4>
 				    		</div>
 				    	</div>
 				    </div>
@@ -114,7 +114,7 @@
 				    	<div class="card">
 				    		<img src="img/sandwich.jpg" class="img-card-top" alt="Hamburguesa">
 				    		<div class="card-body">
-				    			<h4>Sandwich Cubano</h4>
+							<h4 class="text-center font-weight-bold">Sandwich Cubano</h4>
 				    		</div>
 				    	</div>
 				    </div>
@@ -122,7 +122,7 @@
 				    	<div class="card">
 				    		<img src="img/Hotdog.jpg" class="img-card-top" alt="Hamburguesa">
 				    		<div class="card-body">
-				    			<h4>HotDog Americano</h4>
+							<h4 class="text-center font-weight-bold">HotDog Americano</h4>
 				    		</div>
 				    	</div>
 				    </div>
@@ -130,7 +130,7 @@
 				    	<div class="card">
 				    		<img src="img/Churrasco.png" class="img-card-top" alt="Hamburguesa">
 				    		<div class="card-body">
-				    			<h4>Churrasco</h4>
+							<h4 class="text-center font-weight-bold">Churrasco</h4>
 				    		</div>
 				    	</div>
 				    </div>				   
@@ -154,9 +154,9 @@
 		<?php while($Rows = mysqli_fetch_array($Resulta)){
 		echo '
 		
-		<div class="card-group col-sm-4 col-lg-4 col-md-4">
+		<div class="card-group col-sm-12 col-lg-4 col-md-4" style="margin: 35px; border-radius: 15px">
              <div class="card">
-				<h4 style="text-align: justify;">'.$Rows[1].'</h4>
+				<h4 style="text-align: center;">'.$Rows[1].'</h4>
                 <img style="border: 1px solid gray;height: 229px; width: 298px;" class="card-img-top" src="data:image;base64,'.$Rows[8].'" alt="">
                 <div class="card-body">
 					<p><strong>Vendedor:</strong> '.$Rows[2].'</p>					

@@ -7,20 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-<<<<<<< HEAD
-    <title>Clientes</title>
-=======
-    <title>Clientes Manejo</title>
->>>>>>> 44294b6f853be18b0e461b97ec82757f9ab8c682
+    <title>Clientes</title>  
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/business-casual.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-<<<<<<< HEAD
-	<?php
-=======
  	<?php
->>>>>>> 44294b6f853be18b0e461b97ec82757f9ab8c682
 		$Username = null;
 		if(!empty($_SESSION["Username"]))
 		{$Username = $_SESSION["Username"];}
@@ -39,23 +31,17 @@
                 </button>               
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-				<li><a href="index.php">Inicio</a></li>
+                <ul class="nav navbar-nav">				
 					<li><a href="OrdenesManejo.php">Ordenes</a></li>
-					<li><a href="ProductosManejo.php?ProductAction=Add">Productos</a></li>
+					<li><a href="ProductosManejo.php?ProductAction=Add">Crear Producto</a></li>
 					<li><a href="ProductosLista.php">Lista de Productos</a></li>
                     <li><a href="ClientesManejo.php">Clientes</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-<<<<<<< HEAD
-    <div class="container">      
-=======
 
     <div class="container">
-        <div class="row">
->>>>>>> 44294b6f853be18b0e461b97ec82757f9ab8c682
             <div class="box">
                 <div class="col-lg-12">
 					<div class="table-responsive">
@@ -94,18 +80,19 @@
 						</table>
 					</div>
                 </div>
-            </div>
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> 44294b6f853be18b0e461b97ec82757f9ab8c682
+			  </div>
     </div>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022</p>
-                </div>
+	<footer>
+        <div class="container-fluid">            
+                <div class="footer titles">
+                    <p>
+					<?php echo '<strong>Bienvenido Admin</strong>'; ?>
+					<br>										
+					<?php if($Username == null){echo '<a href="Login.php?Role=User">Logout</a>';} else {echo '<a href="Logout.php">Logout</a>';} ?> | 
+					<a href="#">Volver al inicio</a>
+					<br>
+					DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022
+					</p>             
             </div>
         </div>
     </footer>
@@ -129,7 +116,5 @@
 			}
 		}
 	</script>
-
 </body>
-
 </html>

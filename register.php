@@ -40,22 +40,27 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
+<nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid bg-dark text-dark ">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
+                    <span class="sr-only"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
+                </button>            
+                <a class="navbar-brand" href="index.html"></a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.php">Inicio</a></li>
-					<li><a href="productos.php">Tienda</a></li>
-                    <li><a href="about.php">Quienes somos</a></li>					
-					<?php if($Username == null){echo '<li><a href="Login.php?Role=User">Ingresar</a></li>';} else {echo '<li><a href="Logout.php">Cerrar Sesión</a></li>';} ?>
+                	<li><a href="#">Quick⏱rder</a></li>
+                	<li><a href="index.php">Inicio</a></li>		
+					<li><a href="productos.php">Productos</a></li>
+                    <li><a href="about.php">Quienes somos</a></li>
+					<!-- Evento Js llama la funcion declarada desde el archivo Main.js-->
+					<li><a href="#" onclick="ManagementOnclick();">Administrador</a></li>
+					<?php if($Username == null){echo '<li><a href="register.php?ActionType=Register">Registrarse</a></li>';} ?>
+					<?php if($Username == null){echo '<li><a href="Login.php?Role=User">Ingresar</a></li>';} else {echo '<li><a href="Logout.php">Logout</a></li>';} ?>
                 </ul>
             </div>
         </div>
@@ -102,7 +107,7 @@
 							  <input type="correo" name="correo" class="form-control" id="correo" placeholder="Ingresa tu correo">
 							</div>
 							
-							<button type="submit" class="btn btn-default">Enviar</button><br><br>
+							<button type="submit" class="btn btn-primary">Enviar</button><br><br>
 						</form>
 					</div>
                 

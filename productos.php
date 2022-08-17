@@ -64,21 +64,23 @@
 		?>
 		
 		
-		<?php while($Rows = mysqli_fetch_array($Resulta)){
-		echo '	
-		<div class="col-sm-4 col-lg-4 col-md-4">
-             <div class="thumbnail">
-				<h4 style="text-align: center;">'.$Rows[2].'</h4>
-                <img style="border: 2px solid gray; border-radius: 10px; " src="data:image;base64,'.$Rows[8].'" alt="">
-                <div class="caption">
-					<p><strong>Nombre Producto:</strong> '.$Rows[1].'</p>
-					<p><strong>Dimensiones:</strong> '.$Rows[3].'</p>
-					<p><strong>detalle:</strong> '.$Rows[4].'</p>
-					<p><strong>Precio: $ '.$Rows[5].'.00</strong></p>
-                </div>
-				<center><a onclick="addToCartOnclick('.$Rows[0].');" href="#"  style="margin-bottom: 5px;" class="btn btn-primary">Agregar al Carro</a></center>
+		<?php while($Rows = mysqli_fetch_array($Resulta)){	
+		echo '
+		
+		<div class="card-group col-sm-4 col-md-4 col-lg-4">
+             <div class="card">
+				<h4 style="text-align: justify;">'.$Rows[2].'</h4>
+                <img style="border: 1px solid gray;height: 229px; width: 298px;" class="card-img-top" src="data:image;base64,'.$Rows[8].'" alt="">
+				<div class="caption">
+				<p><strong>Nombre Producto:</strong> '.$Rows[1].'</p>
+				<p><strong>Dimensiones:</strong> '.$Rows[3].'</p>
+				<p><strong>detalle:</strong> '.$Rows[4].'</p>
+				<p><strong>Precio: $ '.$Rows[5].'</strong></p>
+			</div>
+				<div class="text-center"><a onclick="addToCartOnclick('.$Rows[0].');" href="#"  style="margin-bottom: 5px;" class="btn btn-primary">Agregar al Carrito</a></div>
             </div>
-        </div>
+        </div> 
+		     
 		';
 		}?>
 		
@@ -116,7 +118,7 @@
 		
 		function addToCartOnclick(ProductID)
 		{	
-			if(confirm("Are you sure you want to add this product to your cart?") == true){
+			if(confirm("¿Quieres agregar este producto al carro de compras?") == true){
 			window.open("Order.php?ProductID="+ProductID,"_self",null,true);
 			}
 		}

@@ -110,10 +110,20 @@
     <!-- /.container -->
 
     <footer>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>DESARROLLO DE SERVICIOS Y APLICACIONES PARA LA NUBE</p>
+                <div class="footer col-lg-12 text-center">
+                    <p>
+					<?php echo '<strong>Bienvenido</strong>'; ?>
+					<br>
+					<strong>
+					<?php if($Username != null){echo '<a href="ManageAccount.php?Role=User">Administrar Cuenta</a> |';} ?> 
+					<?php if($Username == null){echo '<a href="Login.php?Role=User">Ingresar</a>';} else {echo '<a href="Logout.php">Logout</a>';} ?> | 
+					<a href="#">Volver al inicio</a>
+					</strong><br>
+					DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022
+					</p>
+					
                 </div>
             </div>
         </div>

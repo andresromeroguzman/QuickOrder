@@ -42,8 +42,7 @@
                 </button>              
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-				<li><a href="index.php">Inicio</a></li>
+                <ul class="nav navbar-nav">				
 					<li><a href="OrdenesManejo.php">Ordenes</a></li>
 					<li><a href="ProductosManejo.php?ProductAction=Add">Crear Producto</a></li>
 					<li><a href="ProductosLista.php">Lista de Productos</a></li>
@@ -106,7 +105,7 @@
 							</div>
 							
 							<div class="form-group">
-							<button type="submit" style="float: right;" class="btn btn-default">Enviar</button>
+							<button type="submit" style="float: right;" class="btn btn-primary">Enviar</button>
 							</div>
 						</div>
 						</form>
@@ -118,15 +117,20 @@
     </div>
     <!-- /.container -->
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE</p>
-                </div>
+	<footer>
+        <div class="container-fluid">            
+                <div class="footer titles">
+                    <p>
+					<?php echo '<strong>Bienvenido Admin</strong>'; ?>
+					<br>										
+					<?php if($Username == null){echo '<a href="Login.php?Role=User">Logout</a>';} else {echo '<a href="Logout.php">Logout</a>';} ?> | 
+					<a href="#">Volver al inicio</a>
+					<br>
+					DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022
+					</p>             
             </div>
         </div>
-    </footer>	
+    </footer>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

@@ -38,13 +38,14 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Quick⏱rder</a></li>
-                    <li><a href="index.php">Inicio</a></li>                 
-                    <!-- <li><a href="productos.php">Productos</a></li> -->
+                	<li><a href="#">Quick⏱rder</a></li>
+                	<li><a href="index.php">Inicio</a></li>		
+					<li><a href="productos.php">Productos</a></li>
                     <li><a href="about.php">Quienes somos</a></li>
-                    <li><a href="#" onclick="ManagementOnclick();">Administrador</a></li>
-                    <?php if($Username == null){echo '<li><a href="register.php?ActionType=Register">Registrarse</a></li>';} ?>
-                    <?php if($Username == null){echo '<li><a href="Login.php?Role=User">Ingresar</a></li>';} else {echo '<li><a href="Logout.php">Logout</a></li>';} ?>
+					<!-- Evento Js llama la funcion declarada desde el archivo Main.js-->
+					<li><a href="#" onclick="ManagementOnclick();">Administrador</a></li>
+					<?php if($Username == null){echo '<li><a href="register.php?ActionType=Register">Registrarse</a></li>';} ?>
+					<?php if($Username == null){echo '<li><a href="Login.php?Role=User">Ingresar</a></li>';} else {echo '<li><a href="Logout.php">Logout</a></li>';} ?>
                 </ul>
             </div>
         </div>
@@ -52,12 +53,22 @@
        <div class="container">
         <div class="row">
             <div class="col-6">
-                <h4>Realiza tu pedido y reclama tu orden en tiempo exacto</h4>
-                <p>Un nuevo servicio de gestión de pedidos en sitio, facilidad de uso, rapida, confiable y precisa</p>
-            </div>
+                <h4><b>Quick⏱rder</b></h4>
+                <p>Somos un equipo con un enfoque positivo y creativo para trabajar, que busca potenciar las habilidades de las empresas tanto en la parte funcional como en la estética. <br>
+                    Nuestros clientes son personas que se benefician de las soluciones que nosotros les proveemos, por tal motivo para nosotros es muy importante brindarles un excelente 
+                    servicio, por lo tanto, siempre estamos atentos a escuchar e investigar las necesidades del mercado.</p>
+                <p>
+                    <strong>VISIÓN</strong>
+                    Desarrollar soluciones de software a niveles competitivos, con calidad, respaldo y cobertura, que permita a nuestros clientes prosperar, cubrir sus necesidades o facilitarles la realización de algunas labores. Generando confianza, estabilidad y compromiso.
+                </p>
+                <p>
+                     <strong>MISIÓN </strong>
+                Nuestra misión es ser reconocidos como una empresa líder en la prestación de servicios de ingeniería de software en el país.
+                </p>
+                </div>
             <div class="col-6">
-            <h4>Realiza tu pedido y reclama tu orden en tiempo exacto</h4>
-            <img src="img/Quienes.png" alt="Quienes somos" class="QuienesImg">
+            <h4><strong>Realiza tu pedido y reclama tu orden en tiempo exacto</strong></h4>
+            <img src="img/Quienes.jpeg" alt="Quienes somos" class="QuienesImg">
             </div>
         </div>        
         </div>
@@ -65,7 +76,7 @@
     <footer class="container-fluid">                 
                 <div class="footer col-lg-12 text-center">
                     <p>
-                    <?php echo '<strong>'.$Username.'</strong>'; ?>
+                    <?php echo '<strong>Bienvenida' .' '.$Username.'</strong>'; ?>
                     <br>
                     <strong>
                     <?php if($Username != null){echo '<a href="CuentaManejo.php?Role=User">Administrar Cuenta</a> |';} ?> 
