@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>About</title>
+    <title>Quienes Somos</title>
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -42,8 +42,7 @@
                 	<li><a href="index.php">Inicio</a></li>		
 					<li><a href="productos.php">Productos</a></li>
                     <li><a href="about.php">Quienes somos</a></li>
-					<!-- Evento Js llama la funcion declarada desde el archivo Main.js-->
-					<li><a href="#" onclick="ManagementOnclick();">Administrador</a></li>
+                    <!-- Evento Js llama la funcion declarada desde el archivo Main.js-->					
 					<?php if($Username == null){echo '<li><a href="register.php?ActionType=Register">Registrarse</a></li>';} ?>
 					<?php if($Username == null){echo '<li><a href="Login.php?Role=User">Ingresar</a></li>';} else {echo '<li><a href="Logout.php">Logout</a></li>';} ?>
                 </ul>
@@ -52,7 +51,7 @@
     </nav>
        <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-sm-6 col-md-6">
                 <h4><b>Quick⏱rder</b></h4>
                 <p>Somos un equipo con un enfoque positivo y creativo para trabajar, que busca potenciar las habilidades de las empresas tanto en la parte funcional como en la estética. <br>
                     Nuestros clientes son personas que se benefician de las soluciones que nosotros les proveemos, por tal motivo para nosotros es muy importante brindarles un excelente 
@@ -66,29 +65,29 @@
                 Nuestra misión es ser reconocidos como una empresa líder en la prestación de servicios de ingeniería de software en el país.
                 </p>
                 </div>
-            <div class="col-6">
+            <div class="col-sm-6 col-md-6">
             <h4><strong>Realiza tu pedido y reclama tu orden en tiempo exacto</strong></h4>
             <img src="img/Quienes.jpeg" alt="Quienes somos" class="QuienesImg">
             </div>
         </div>        
         </div>
     </div>    
-    <footer class="container-fluid">                 
-                <div class="footer col-lg-12 text-center">
+    <footer>
+        <div class="container-fluid">            
+                <div class="footer titles">
                     <p>
-                    <?php echo '<strong>Bienvenida' .' '.$Username.'</strong>'; ?>
-                    <br>
-                    <strong>
-                    <?php if($Username != null){echo '<a href="CuentaManejo.php?Role=User">Administrar Cuenta</a> |';} ?> 
-                    <?php if($Username == null){echo '<a href="Login.php?Role=User">Ingresar</a>';} else {echo '<a href="Logout.php">Logout</a>';} ?> | 
-                    <a href="#">Volver al inicio</a>
-                    </strong><br>
-                    DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022
-                    </p>           
+					<?php echo '<strong>Bienvenido '.$Username.'</strong>'; ?>
+					<br>					
+					<?php if($Username != null){echo '<a href="CuentaManejo.php?Role=User">Administrar Cuenta</a> |';} ?> 
+					<?php if($Username == null){echo '<a href="Login.php?Role=User"></a>';} else {echo '<a href="Logout.php">CERRAR SESION | </a>';} ?>  
+					<a href="#" onclick="ManagementOnclick();">Ingresar Como Administrador</a> |
+					<a href="#">Volver al inicio</a> 
+					<br>
+					 DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE <br> SENA 2022
+					</p>             
             </div>
         </div>
-        
-    </footer>    
+    </footer>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->

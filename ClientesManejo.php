@@ -40,7 +40,6 @@
             </div>
         </div>
     </nav>
-
     <div class="container">
             <div class="box">
                 <div class="col-lg-12">
@@ -88,10 +87,10 @@
                     <p>
 					<?php echo '<strong>Bienvenido Admin</strong>'; ?>
 					<br>										
-					<?php if($Username == null){echo '<a href="Login.php?Role=User">Logout</a>';} else {echo '<a href="Logout.php">Logout</a>';} ?> | 
+					<?php if($Username == null){echo '<a href="Login.php?Role=User">CERRAR SESION</a>';} else {echo '<a href="Logout.php">CERRAR SESION</a>';} ?> | 
 					<a href="#">Volver al inicio</a>
 					<br>
-					DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022
+					DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE <br> SENA 2022
 					</p>             
             </div>
         </div>

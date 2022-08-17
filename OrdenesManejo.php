@@ -12,7 +12,6 @@
     <link href="css/business-casual.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-
    	<?php
 		if(empty($_SESSION['Admin'])){echo '<script>window.open("index.php","_self",null,true);</script>';}
 	?>
@@ -82,31 +81,25 @@
 								<?php endwhile; ?>
 								</tr>
 							</table>
-						</div>
-					
+						</div>					
                 </div>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-    <!-- /.container -->
-
 	<footer>
         <div class="container-fluid">            
                 <div class="footer titles">
                     <p>
 					<?php echo '<strong>Bienvenido Admin</strong>'; ?>
 					<br>										
-					<?php if($Username == null){echo '<a href="Login.php?Role=User">Ingresar</a>';} else {echo '<a href="Logout.php">Logout</a>';} ?> | 
+					<?php if($Username == null){echo '<a href="Login.php?Role=User">Ingresar</a>';} else {echo '<a href="Logout.php">CERRAR SESION</a>';} ?> | 
 					<a href="#">Volver al inicio</a>
 					<br>
-					DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022
+					DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE <br> SENA 2022
 					</p>             
             </div>
         </div>
     </footer>
-
-=======
     <footer>
         <div class="container">
             <div class="row">
@@ -115,8 +108,7 @@
                 </div>
             </div>
         </div>
-    </footer>	
->>>>>>> 50f624f0f7bff9a731078e71096c116c70c4c44e
+    </footer>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script>

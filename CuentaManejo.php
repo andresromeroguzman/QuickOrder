@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Administra Tu Cuenta y Pedidos</title>
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/business-casual.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -36,14 +34,8 @@
 	?>
 </head>
 <body>
-<<<<<<< HEAD
-
-<nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid bg-dark text-dark ">
-=======
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
->>>>>>> 50f624f0f7bff9a731078e71096c116c70c4c44e
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only"></span>
@@ -148,8 +140,7 @@
 						</div>
 					</div>
 					<button type="button" class="btn btn-primary""><a href="ticket.php" style="color:white; text-decoration:none;">Imprime tu ticket</a></button>
-                </div>
-				
+                </div>				
             </div>			
         </div>
     </div>
@@ -166,8 +157,7 @@
                     <a href="#">Volver al inicio</a>
                     </strong><br>
                     DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022
-                    </p>
-                    
+                    </p>                    
                 </div>
             </div>
         </div>

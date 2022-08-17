@@ -1,22 +1,19 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Order</title>
+    <title>Orden</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/business-casual.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" 
 	rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" 
-	rel="stylesheet" type="text/css">
-	
+	rel="stylesheet" type="text/css">	
     	<?php
 		$Username = null;
 		if(!empty($_SESSION["Username"]))
@@ -25,9 +22,7 @@
 		}
 	?>
 </head>
-
 <body>
-
 <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid bg-dark text-dark ">
             <div class="navbar-header">
@@ -51,8 +46,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
-	
+    </nav>	
 	<?php
 		require 'Connection.php';
 		$UN = $_SESSION['Username'];
@@ -67,7 +61,6 @@
 			$CustomerID = $Rows[0];
 		}
 	?>
-
     <div class="container">        
             <div class="box">
                 <div class="col-lg-12">
@@ -99,16 +92,12 @@
 						<label for="tamano">Cantidad:</label>
 						<input type="text" name="tamano" class="form-control" id="tamano">
 					</div>
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" class="btn btn-primary">Registrar Orden</button>
 					</form>
 				</div>                
                 <div class="clearfix"></div> 
              </div>
-        
-
     </div>
-    <!-- /.container -->
-
     <footer>
         <div class="container-fluid">
             <div class="row">
@@ -118,7 +107,7 @@
 					<br>
 					<strong>
 					<?php if($Username != null){echo '<a href="ManageAccount.php?Role=User">Administrar Cuenta</a> |';} ?> 
-					<?php if($Username == null){echo '<a href="Login.php?Role=User">Ingresar</a>';} else {echo '<a href="Logout.php">Logout</a>';} ?> | 
+					<?php if($Username == null){echo '<a href="Login.php?Role=User">Ingresar</a>';} else {echo '<a href="Logout.php">CERRAR SESION</a>';} ?> | 
 					<a href="#">Volver al inicio</a>
 					</strong><br>
 					DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022
@@ -127,14 +116,8 @@
                 </div>
             </div>
         </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
+    </footer>  
+    <script src="js/jquery.js"></script>    
     <script src="js/bootstrap.min.js"></script>
-
 </body>
-
 </html>

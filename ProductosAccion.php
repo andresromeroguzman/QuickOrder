@@ -1,11 +1,7 @@
 <?php
-
 	session_start();
-	$ProductAction = $_GET["ProductAction"];
-	
-	require 'Connection.php';
-	
-	
+	$ProductAction = $_GET["ProductAction"];	
+	require 'Connection.php';	
 	if($ProductAction == "Add")
 	{
 		$_nombre = $_POST["nombre"];
@@ -65,7 +61,6 @@
 		$res = mysqli_query($Conn,$sql);
 		if($res)
 		{
-
 			echo '<script>window.alert("Producto ha sido actualizaco correctamente!"); window.open("ProductosLista.php","_self",null,true)</script>';
 
 			echo '<script>window.alert("El producto ha sido actualizado!"); window.open("ProductosLista.php","_self",null,true)</script>';
@@ -78,7 +73,6 @@
 		$res = mysqli_query($Conn,$sql);
 		if($res)
 		{
-
 			echo '<script>window.alert("El Producto ha sido eliminado correctamente!"); window.open("ProductosLista.php","_self",null,true)</script>';
 
 			echo '<script>window.alert("El Producto ha sido Borrado!"); window.open("ProductosLista.php","_self",null,true)</script>';

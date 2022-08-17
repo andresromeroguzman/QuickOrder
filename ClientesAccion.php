@@ -1,5 +1,4 @@
 <?php
-
 	require 'Connection.php';
 	$CustomerID = $_GET["ID"];
 	
@@ -9,5 +8,4 @@
 	{
 		echo '<script>window.open("ClientesManejo.php","_self",null,true)</script>';
 	}
-
 ?>

@@ -8,5 +8,4 @@
 	{
 		echo '<script>window.open("CuentaManejo.php","_self",null,true)</script>';
 	}
-
 ?>

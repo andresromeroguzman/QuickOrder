@@ -1,26 +1,18 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Quick⌚rder</title>
+    <title>Productos</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/business-casual.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	
-	<?php
+  	<?php
 		$Username = null;
 		if(!empty($_SESSION["Username"]))
 		{
@@ -28,7 +20,6 @@
 		}
 	?>
 </head>
-
 <body>
 <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid bg-dark text-dark ">
@@ -47,23 +38,19 @@
                 	<li><a href="index.php">Inicio</a></li>
 					<!-- <li><a href="bestseller.php">Productos más Populares</a></li> -->
 					<li><a href="productos.php">Productos</a></li>
-                    <li><a href="about.php">Quienes somos</a></li>
-					<li><a href="#" onclick="ManagementOnclick();">Administrador</a></li>
+                    <li><a href="about.php">Quienes somos</a></li>					
 					<?php if($Username == null){echo '<li><a href="register.php?ActionType=Register">Registrarse</a></li>';} ?>
 					<?php if($Username == null){echo '<li><a href="Login.php?Role=User">Ingresar</a></li>';} else {echo '<li><a href="Logout.php">Logout</a></li>';} ?>
                 </ul>
             </div>
         </div>
     </nav>
-
     <div class="container">
 		<?php 
 			$conn = mysqli_connect("localhost","root","","quickorder");
 			$sql = "SELECT * FROM `productos` order by precio";
 			$Resulta = mysqli_query($conn,$sql);
-		?>
-		
-		
+		?>		
 		<?php while($Rows = mysqli_fetch_array($Resulta)){	
 		echo '
 		
@@ -79,33 +66,26 @@
 			</div>
 				<div class="text-center"><a onclick="addToCartOnclick('.$Rows[0].');" href="#"  style="margin-bottom: 5px;" class="btn btn-primary">Agregar al Carrito</a></div>
             </div>
-        </div> 
-		     
+        </div> 		     
 		';
-		}?>
-		
+		}?>		
 	</div>
-
     <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="footer col-lg-12 text-center">
+        <div class="container-fluid">            
+                <div class="footer titles">
                     <p>
 					<?php echo '<strong>Bienvenido '.$Username.'</strong>'; ?>
+					<br>					
+					<?php if($Username != null){echo '<a href="CuentaManejo.php?Role=User">Administrar Cuenta</a> |';} ?> 
+					<?php if($Username == null){echo '<a href="Login.php?Role=User"></a>';} else {echo '<a href="Logout.php">CERRAR SESION | </a>';} ?>  
+					<a href="#" onclick="ManagementOnclick();">Ingresar Como Administrador</a> |
+					<a href="#">Volver al inicio</a> 
 					<br>
-					<strong>
-					<?php if($Username != null){echo '<a href="ManageAccount.php?Role=User">Administrar Cuenta</a> |';} ?> 
-					<?php if($Username == null){echo '<a href="Login.php?Role=User">Ingresar</a>';} else {echo '<a href="Logout.php">Logout</a>';} ?> | 
-					<a href="#">Volver al inicio</a>
-					</strong><br>
-					DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022
-					</p>
-					
-                </div>
+					 DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE <br> SENA 2022
+					</p>             
             </div>
         </div>
     </footer>
-
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
@@ -124,5 +104,4 @@
 		}
     </script>
 </body>
-
 </html>

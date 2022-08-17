@@ -53,7 +53,7 @@
 					<li><a href="productos.php">Productos</a></li>
                     <li><a href="about.php">Quienes somos</a></li>
 					<!-- Evento Js llama la funcion declarada desde el archivo Main.js-->
-					<li><a href="#" onclick="ManagementOnclick();">Administrador</a></li>
+					<!-- <li><a href="#" onclick="ManagementOnclick();">Administrador</a></li> -->
 					<?php if($Username == null){echo '<li><a href="register.php?ActionType=Register">Registrarse</a></li>';} ?>
 					<?php if($Username == null){echo '<li><a href="Login.php?Role=User">Ingresar</a></li>';} else {echo '<li><a href="Logout.php">Logout</a></li>';} ?>
                 </ul>
@@ -138,8 +138,7 @@
     			<!-- Fin del Carousel -->
     		</div>
     	</div>
-    </section>    
-
+    </section>
     <!-- Imprimir los productos -->
 		<div class="container-fluid">
 			<h2 class="titles">selecciona tu producto y realiza la orden</h2>
@@ -149,12 +148,10 @@
 			$sql = "SELECT * FROM `productos` Limit 10";
 			$Resulta = mysqli_query($conn,$sql);
 		?>
-		<!-- Imprimir los productos -->
-		
+		<!-- Imprimir los productos -->		
 		<?php while($Rows = mysqli_fetch_array($Resulta)){
-		echo '
-		
-		<div class="card-group col-sm-12 col-lg-4 col-md-4" style="margin: 35px; border-radius: 15px">
+		echo '		
+		<div class="card-group col-sm-4 col-md-4 col-lg-4 col-4 "style="margin-left:30px; border-radius: 15px">
              <div class="card">
 				<h4 style="text-align: center;">'.$Rows[1].'</h4>
                 <img style="border: 1px solid gray;height: 229px; width: 298px;" class="card-img-top" src="data:image;base64,'.$Rows[8].'" alt="">
@@ -176,13 +173,13 @@
                 <div class="footer titles">
                     <p>
 					<?php echo '<strong>Bienvenido '.$Username.'</strong>'; ?>
-					<br>
-					<strong>
+					<br>					
 					<?php if($Username != null){echo '<a href="CuentaManejo.php?Role=User">Administrar Cuenta</a> |';} ?> 
-					<?php if($Username == null){echo '<a href="Login.php?Role=User">Ingresar</a>';} else {echo '<a href="Logout.php">Logout</a>';} ?> | 
-					<a href="#">Volver al inicio</a>
-					</strong><br>
-					DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE 2022
+					<?php if($Username == null){echo '<a href="Login.php?Role=User"></a>';} else {echo '<a href="Logout.php">CERRAR SESION |</a>';} ?>  
+					<a href="#" onclick="ManagementOnclick();">Ingresar Como Administrador</a> |
+					<a href="#">Volver al inicio</a> 
+					<br>
+					 DESARROLLO DE APLICACIONES Y SERVICIOS PARA LA NUBE <br> SENA 2022
 					</p>             
             </div>
         </div>
@@ -193,7 +190,6 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <script>
     	$('.owl-carousel').owlCarousel({
     loop:true,

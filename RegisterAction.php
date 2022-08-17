@@ -1,5 +1,4 @@
-<?php
-	
+<?php	
 	require 'Connection.php';
 	$ActionType = $_GET['ActionType'];
 	$Username = $_POST['Username'];		
@@ -44,10 +43,8 @@
 				else if($Location == "MC"){
 				echo '<script>window.open("ClientesManejo.php","_self",null,true);</script>';}
 			}
-		}
-		
+		}		
 	}
-
 ?>
 
 

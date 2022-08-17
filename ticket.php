@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <title>CodePen - Flight ticket challange</title>
   <link rel="stylesheet" href="css/ticket.css">
-
 </head>
 <?php
 		require 'Connection.php';
@@ -33,10 +32,7 @@ $sqlI = "SELECT ordenes.OrderID, productos.nombre, productos.marca, ordenes.adic
 			" ordenes on ordenes.ProductID = productos.ProductID WHERE ordenes.CustomerID = $C_ID ORDER BY ordenes.OrderID";
 			$Resulta = mysqli_query($Conn,$sqlI);
 			while($Rows = mysqli_fetch_array($Resulta)):; 
-	?>
-							
-                     
-								
+	?> 		
 								
 								
 <body onLoad="timer()">
@@ -93,7 +89,6 @@ $sqlI = "SELECT ordenes.OrderID, productos.nombre, productos.marca, ordenes.adic
       </div>
    </div>
 </main>
-
 <script language="javascript">  
     function timer(){  
 		var t=setTimeout("timer()",1000);  
@@ -104,8 +99,7 @@ $sqlI = "SELECT ordenes.OrderID, productos.nombre, productos.marca, ordenes.adic
 		}  
 	}  
 	i=15;  
-    </script>	
-  
+    </script>  
 </body>
 </html>
 <?php 

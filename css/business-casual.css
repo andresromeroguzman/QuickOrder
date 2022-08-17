@@ -14,6 +14,9 @@ body {
     margin-left: 100px;
 
 }
+.item img {
+    height:150px;
+}
 
 
 .modal-header {
@@ -32,6 +35,11 @@ body {
 .titles{
     text-transform: uppercase;
     text-align: center;
+}
+.intro-text {
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bolder;
 }
 
 
@@ -97,12 +105,12 @@ footer p {
 }
 footer p a{
     margin: 0;
-    font-size: 18px;    
+    font-size: 14px;    
     color: white;
 }
 footer a:hover{
     text-decoration: none;
-    color: grey;
+    color: rgb(158, 238, 67);
    
 }
 
