@@ -46,11 +46,13 @@
         </div>
     </nav>
     <div class="container">
+		<!-- Conexion a la base de datos -->
 		<?php 
 			$conn = mysqli_connect("localhost","root","","quickorder");
 			$sql = "SELECT * FROM `productos` order by precio";
 			$Resulta = mysqli_query($conn,$sql);
 		?>		
+		<!-- Se imprimen los productos -->
 		<?php while($Rows = mysqli_fetch_array($Resulta)){	
 		echo '
 		

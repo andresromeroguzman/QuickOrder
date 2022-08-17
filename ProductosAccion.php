@@ -1,3 +1,4 @@
+<!-- Configuracion del producto despues de haberse creado, editar o eliminar-->
 <?php
 	session_start();
 	$ProductAction = $_GET["ProductAction"];	
@@ -36,10 +37,10 @@
 		$_categoria = $_POST["categoria"];
 		$_precio = $_POST["precio"];
 		
-		$image = addslashes($_FILES['imagen']['tmp_name']);
+		$image = addslashes($_FILES['imagen']['tmp_name']); //devuelve cadena con barras invertidas delante de los caracteres
 		$name = addslashes($_FILES['imagen']['name']);
-		$image = file_get_contents($image);
-		$image = base64_encode($image);
+		$image = file_get_contents($image); //Transmite la info del fichero a la cadena
+		$image = base64_encode($image); //Codifica datos de la imagen para que puedan ser almacenados en la BD
 		
 		$_ProductID = $_GET["ProductID"];
 		if(empty($_FILES['imagen']['tmp_name'])){
@@ -61,7 +62,7 @@
 		$res = mysqli_query($Conn,$sql);
 		if($res)
 		{
-			echo '<script>window.alert("Producto ha sido actualizaco correctamente!"); window.open("ProductosLista.php","_self",null,true)</script>';
+			echo '<script>window.alert("Producto ha sido actualizado correctamente!"); window.open("ProductosLista.php","_self",null,true)</script>';
 
 			echo '<script>window.alert("El producto ha sido actualizado!"); window.open("ProductosLista.php","_self",null,true)</script>';
 

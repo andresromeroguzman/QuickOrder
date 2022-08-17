@@ -8,7 +8,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Productos</title>
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/business-casual.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -44,6 +43,7 @@
     </nav>
     <div class="container">       
             <div class="box">
+				<!-- Formulario para editar producto seleccionado -->
                 <div class="col-lg-12">
 						<hr>
 						<h2 class="intro-text text-center">Productos</h2>
@@ -53,6 +53,7 @@
 							<form role="form" action="ProductosAccion.php?ProductAction=
 							<?php echo $ProductAction; if($ProductAction=="Edit"){ echo "&ProductID=" . $_GET['ProdID'];} ?>" 
 							method="POST" enctype = "multipart/form-data">
+							<!-- Utilizado para subir archivos texto/imagen al server -->
 							
 							<div class="form-group">
 							  <label for="nombre">Nombre:</label>

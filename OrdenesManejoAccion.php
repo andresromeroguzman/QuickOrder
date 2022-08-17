@@ -1,3 +1,4 @@
+<!-- Eliminar Ordenes Almacenadas -->
 <?php
 	require 'Connection.php';
 	$ID = $_GET["id"];

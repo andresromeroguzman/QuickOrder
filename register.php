@@ -1,3 +1,4 @@
+<!-- Se genera la sesion teniendo en cuenta las variables que se relacionan con el archivo RegisterAction -->
 <?php 
 	session_start(); 
 	$ActionType = $_GET['ActionType'];

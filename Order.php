@@ -1,3 +1,4 @@
+<!-- Configuracion de valores restantes para completar la orden -->
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">

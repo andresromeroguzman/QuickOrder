@@ -1,3 +1,4 @@
+<!-- Registra valores restantes para completar la orden -->
 <?php
 	session_start();
 	require 'Connection.php';

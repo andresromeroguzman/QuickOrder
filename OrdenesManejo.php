@@ -1,3 +1,4 @@
+<!-- Informacion correspondiente a las ordenes almacenadas por los usuarios clientes -->
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">

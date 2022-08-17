@@ -60,13 +60,15 @@
 									<td>Categoría</td>
 									<td>Acción</td>
 								</tr>
-								
+								<!-- Se establece conexion con la base de datos seleccionando los archivos almacenados en la tabla
+								productos  -->
 								<?php 
 									require 'Connection.php';
 									$sql = "select * from productos";
 									$Resulta = mysqli_query($Conn,$sql);
 									while($Rows = mysqli_fetch_array($Resulta)):; 
 								?>
+								<!-- Se imprime la tabla con los valores recepcionados -->
 								<tr style="color: black">
 									<td><img style="width: 50px; height: 50px;" src="data:image;base64,<?php echo $Rows[8];?>"></td>
 									<td><?php $cid = $Rows[0]; echo $cid; ?></td>
@@ -77,6 +79,7 @@
 									<td><?php echo $Rows[5]; ?></td>
 									<td><?php echo $Rows[6]; ?></td>
 									<td>
+										<!-- Botones de accion -->
 									<a href="#" onclick="ProductOnlick('Edit',<?php echo $Rows[0]; ?>)">Editar</a> | 
 									<a href="#" onclick="ProductOnlick('Delete',<?php echo $Rows[0]; ?>)">Eliminar</a>
 									</td>

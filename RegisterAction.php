@@ -1,3 +1,5 @@
+<!-- Se establece conección a la base de datos, se definen las variables que van a guardar los valores
+ relacionados a la tabla usuarios -->
 <?php	
 	require 'Connection.php';
 	$ActionType = $_GET['ActionType'];
@@ -7,7 +9,7 @@
 	$apellidos = $_POST['apellidos'];
 	$direccion = $_POST['direccion'];
 	$correo = $_POST['correo'];
-	
+	// Validacion para que no pasen campos vacios
 	if(empty($Username) || empty($Password) || empty($nombres) || empty($apellidos)  || empty($direccion) || empty($correo))
 	{
 		echo '<script>window.alert("Debe llenar todos los campos"); window.open("register.php","_self",null,true);</script>';
@@ -16,6 +18,7 @@
 	{
 		if($ActionType == "Register")
 		{
+			// Se ingresan los valores en la tabla teniendo en cuenta los campos que la componen
 			$sql = "INSERT INTO `usuarios`(`Username`,`Password`,`Role`,`nombres`, `apellidos`,`direccion`, `correo`)" .
 					" VALUES ('$Username','$Password','User','$nombres','$apellidos','$direccion','$correo')";
 			$res = mysqli_query($Conn,$sql);
@@ -29,6 +32,7 @@
 		}
 		else
 		{
+			// Si algun campo no coincide se mostrará una alerta
 			$ID = $_GET['ID'];
 			$sqlI = "UPDATE `usuarios` SET `Username`='$Username',`Password`='$Password',`nombres`='$nombres'," .
 			"`apellidos`='$apellidos',`direccion`='$direccion',`correo`='$correo' WHERE CustomerID = $ID";

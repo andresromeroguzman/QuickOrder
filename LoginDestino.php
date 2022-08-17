@@ -1,3 +1,4 @@
+<!-- Gestion del logeo de sesion Roles User y Admin -->
 <?php
 	session_start();
 	$conn = mysqli_connect("localhost","root","","quickorder");
