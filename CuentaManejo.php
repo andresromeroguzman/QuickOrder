@@ -1,28 +1,19 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Register an Accout</title>
+    <title>Administra Tu Cuenta y Pedidos</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/business-casual.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 	<?php
 		require 'Connection.php';
 		$Username = null;
@@ -44,11 +35,15 @@
 		}
 	?>
 </head>
-
 <body>
+<<<<<<< HEAD
 
 <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid bg-dark text-dark ">
+=======
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+>>>>>>> 50f624f0f7bff9a731078e71096c116c70c4c44e
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only"></span>
@@ -113,7 +108,7 @@
 							<button type="submit" class="btn btn-primary">Editar</button>
 						</form>
 					</div>
-					
+					<!-- Menu Derecho Administrar Ordenes -->
 					<div class="col-md-8">	
 						<h4 style="text-align: center">Mis Ordenes</h4>
 						<div class="table-responsive">
@@ -128,7 +123,7 @@
 									<td>Fecha Orden</td>
 									<td>Accion</td>
 								</tr>
-								
+								<!-- Imprimir resultados traerlos de la base de datos mediante Query -->
 								<?php 
 								$sqlI = "SELECT ordenes.OrderID, productos.nombre, productos.marca, ordenes.adicionales, " .
 								" ordenes.detalle, productos.precio, ordenes.fechapedido FROM productos RIGHT JOIN " .
@@ -155,14 +150,9 @@
 					<button type="button" class="btn btn-primary""><a href="ticket.php" style="color:white; text-decoration:none;">Imprime tu ticket</a></button>
                 </div>
 				
-            </div>
-			
+            </div>			
         </div>
-		
-
     </div>
-    <!-- /.container -->
-
     <footer>
         <div class="container-fluid">
             <div class="row">
@@ -182,7 +172,6 @@
             </div>
         </div>
     </footer>
-
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script>
@@ -194,9 +183,7 @@
 			}
 		}
 	</script>
-
 </body>
-
 </html>
 
 
